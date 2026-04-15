@@ -45,6 +45,7 @@ def clean_data(input_path):
     df["kd_ratio"] = df["kills"] / df["deaths"].replace(0, np.nan)
 
     df['date'] = pd.to_datetime(df['date'])
+    df['year'] = df['date'].dt.year
 
     return df
 
