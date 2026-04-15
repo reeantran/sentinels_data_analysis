@@ -43,9 +43,8 @@ def clean_data(input_path):
     
     # adding df column kd_ratio and era
     df["kd_ratio"] = df["kills"] / df["deaths"].replace(0, np.nan)
-    df["era"] = df["year"].apply(
-        lambda y: 1 if y == 2026 else 0
-    )
+
+    df['date'] = pd.to_datetime(df['date'])
 
     return df
 
