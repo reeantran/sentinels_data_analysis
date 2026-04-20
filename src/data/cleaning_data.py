@@ -33,7 +33,7 @@ def clean_data(input_path):
             )
 
     numeric_cols = [
-        "year", "rating", "acs", "kills", "deaths", "assists", "plus_minus_kd", "kast", "adr", "hs_perc", "first_kills", "first_deaths", "plus_minus_fkd", "clutches"
+        "year", "rating", "acs", "kills", "deaths", "assists", "plus_minus", "kast", "adr", "hs_perc", "first_kills", "first_deaths", "plus_minus_f", "clutches"
     ]
 
     # making sure these are numeric values and not strings
@@ -57,5 +57,5 @@ if __name__ == "__main__":
 
     df_clean = clean_data(input_path)
 
-    os.makedirs("data", exist_ok=True)
+    # os.makedirs("data", exist_ok=True)
     df_clean.to_csv(output_path, index=False)
