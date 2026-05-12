@@ -1,12 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("../../data/sen_data_clean.csv")
+df = pd.read_csv("../../clean_data/individual_stats.csv")
 
-flex = df.loc[df['role'] == 'flex']
-plt.figure(4)
-plt.scatter(flex['date'], flex['kd_ratio'])
-plt.title("Flex Comparison")
-plt.xticks(rotation=45)
-
-plt.show()
+p2 = df.loc[df['player_name'] == 'cortezia']
+stats = ["rds_played", "rating", "acs", "k/d", "kast", "adr", "kpr", "apr", "fkpr", "fdpr", "hs%", "cl%"]

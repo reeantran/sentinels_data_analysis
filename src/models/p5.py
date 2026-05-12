@@ -1,12 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("../../data/sen_data_clean.csv")
+df = pd.read_csv("../../clean_data/individual_stats.csv")
 
-sentinel = df.loc[df['role'] == 'sentinel']
-plt.figure(5)
-plt.scatter(sentinel['date'], sentinel['kd_ratio'])
-plt.title("Sentinel Comparison")
-plt.xticks(rotation=45)
-
-plt.show()
+p5 = df.loc[df['player_name'] == 'n4rrate' or df['player_name'] == 'victor' or df['player_name'] == 'jerrwin']
+stats = ["rds_played", "rating", "acs", "k/d", "kast", "adr", "kpr", "apr", "fkpr", "fdpr", "hs%", "cl%"]
