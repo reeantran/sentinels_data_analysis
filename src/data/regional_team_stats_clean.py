@@ -23,6 +23,4 @@ if __name__ == "__main__":
     output_path = os.path.join(BASE_DIR, "clean_data", "regional_team_stats.csv")
 
     df_clean = clean_data(input_path)
-
-    os.makedirs("data", exist_ok=True)
     df_clean.to_csv(output_path, index=False)
