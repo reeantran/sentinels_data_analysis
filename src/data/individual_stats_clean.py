@@ -14,6 +14,8 @@ def clean_data(input_path):
                 .astype(float) / 100
             )
 
+    df['cl%'] = df['cl%'].fillna(0)
+
     numeric_cols = [
         "series_result", "rds_played", "rating", "acs", "k/d", "kast", "adr", "kpr", "apr", "fkpr", "fdpr", "hs%", "cl%"
     ]
