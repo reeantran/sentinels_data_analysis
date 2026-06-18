@@ -17,7 +17,7 @@ def clean_data(input_path):
     df['cl%'] = df['cl%'].fillna(0)
 
     numeric_cols = [
-        "series_result", "rds_played", "rating", "acs", "k/d", "kast", "adr", "kpr", "apr", "fkpr", "fdpr", "hs%", "cl%"
+        "series_result", "rds_played", "rating", "acs", "kd", "kast", "adr", "kpr", "apr", "fkpr", "fdpr", "hs_percent", "cl_percent"
     ]
 
     for col in numeric_cols:
@@ -29,8 +29,8 @@ def clean_data(input_path):
 if __name__ == "__main__":
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
     
-    input_path = os.path.join(BASE_DIR, "raw_data", "individual_stats.csv")
-    output_path = os.path.join(BASE_DIR, "clean_data", "individual_stats.csv")
+    input_path = os.path.join(BASE_DIR, "raw_data", "individual_sen_series_stats.csv")
+    output_path = os.path.join(BASE_DIR, "clean_data", "individual_sen_series_stats.csv")
 
     df_clean = clean_data(input_path)
     df_clean.to_csv(output_path, index=False)

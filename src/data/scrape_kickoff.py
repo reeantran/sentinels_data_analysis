@@ -41,6 +41,14 @@ for tr in table.find("tbody").find_all("tr"):
 
 df = pd.DataFrame(rows)
 
+numeric_cols = [
+    "rating", "acs", "kd", "kast", "adr", "kpr", "apr", "fkpr", "fdpr", "hs_percent", "cl_percent"
+]
+
+for col in numeric_cols:
+    if col in df.columns:
+        df[col] = pd.to_numeric(df[col], errors="coerce")
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 output_path = os.path.join(BASE_DIR, "clean_data", "all_players_kickoff.csv")
 df.to_csv(output_path, index=False)

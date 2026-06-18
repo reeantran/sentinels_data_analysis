@@ -6,21 +6,27 @@ def clean_data(input_path):
     df = pd.read_csv(input_path)
 
     numeric_cols = [
-        "maps_played", "map_wins", "win%", "attack_r", "attack_r_w", "attack_r_w%", "defense_r", "defense_r_w", "defense_r_w%", "pistol_r", "pistol_r_w"
-        , "pistol_r_w%"
+        "wr", "t_wr", "ct_wr", "p_wr"
     ]
 
     for col in numeric_cols:
         if col in df.columns:
-            df[col] = pd.to_numeric(df[col], errors="coerce")
+            frac = df[col].str.split("/", expand=True).astype(float)
+            df[col] = frac[0] / frac[1] * 100
 
     return df
 
 if __name__ == "__main__":
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
     
-    input_path = os.path.join(BASE_DIR, "raw_data", "regional_team_stats.csv")
-    output_path = os.path.join(BASE_DIR, "clean_data", "regional_team_stats.csv")
+    input_path = os.path.join(BASE_DIR, "raw_data", "regional_team_stats_s1.csv")
+    output_path = os.path.join(BASE_DIR, "clean_data", "regional_team_stats_s1.csv")
+
+    df_clean = clean_data(input_path)
+    df_clean.to_csv(output_path, index=False)
+
+    input_path = os.path.join(BASE_DIR, "raw_data", "regional_team_stats_kickoff.csv")
+    output_path = os.path.join(BASE_DIR, "clean_data", "regional_team_stats_kickoff.csv")
 
     df_clean = clean_data(input_path)
     df_clean.to_csv(output_path, index=False)
