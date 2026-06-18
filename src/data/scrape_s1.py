@@ -50,5 +50,5 @@ for col in numeric_cols:
         df[col] = pd.to_numeric(df[col], errors="coerce")
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
-output_path = os.path.join(BASE_DIR, "clean_data", "all_players_s1.csv")
+output_path = os.path.join(BASE_DIR, "clean_data", "reg_players_s1.csv")
 df.to_csv(output_path, index=False)

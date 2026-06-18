@@ -19,14 +19,14 @@ def clean_data(input_path):
 if __name__ == "__main__":
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
     
-    input_path = os.path.join(BASE_DIR, "raw_data", "regional_team_stats_s1.csv")
-    output_path = os.path.join(BASE_DIR, "clean_data", "regional_team_stats_s1.csv")
+    input_path = os.path.join(BASE_DIR, "raw_data", "reg_teams_s1.csv")
+    output_path = os.path.join(BASE_DIR, "clean_data", "reg_teams_s1.csv")
 
     df_clean = clean_data(input_path)
     df_clean.to_csv(output_path, index=False)
 
-    input_path = os.path.join(BASE_DIR, "raw_data", "regional_team_stats_kickoff.csv")
-    output_path = os.path.join(BASE_DIR, "clean_data", "regional_team_stats_kickoff.csv")
+    input_path = os.path.join(BASE_DIR, "raw_data", "reg_teams_kickoff.csv")
+    output_path = os.path.join(BASE_DIR, "clean_data", "reg_teams_kickoff.csv")
 
     df_clean = clean_data(input_path)
     df_clean.to_csv(output_path, index=False)
