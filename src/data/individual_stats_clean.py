@@ -4,6 +4,8 @@ import os
 
 def clean_data(input_path):
     df = pd.read_csv(input_path)
+
+    df['cl_percent'] = df['cl_percent'].fillna(0)
     
     for col in ["kast", "hs_percent", "cl_percent"]:
         if col in df.columns:
@@ -13,8 +15,6 @@ def clean_data(input_path):
                 .str.replace("%", "", regex=False)
                 .astype(float) / 100
             )
-
-    df['cl_percent'] = df['cl_percent'].fillna(0)
 
     numeric_cols = [
         "series_result", "rds_played", "rating", "acs", "kd", "kast", "adr", "kpr", "apr", "fkpr", "fdpr", "hs_percent", "cl_percent"
