@@ -31,3 +31,8 @@ plt.ylim(0, 1)
 plt.legend(title='')
 plt.tight_layout()
 plt.show()
+
+# print("Kickoff Advantage Winrate: " + kickoff_adv_wr)
+# print("Stage 1 Advantage Winrate: " + s1_adv_wr)
+# print("Kickoff Disadvantage Winrate: " + kickoff_disadv_wr)
+# print("Stage 1 Disadvantage Winrate: " + s1_disadv_wr)
