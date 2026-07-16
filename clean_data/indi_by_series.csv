@@ -1,4 +1,4 @@
-match_id,event,player_name,series_result,rds_played,rating,acs,k/d,kast,adr,kpr,apr,fkpr,fdpr,hs_percent,cl_percent
+match_id,event,player,series_result,rds_played,rating,acs,kd,kast,adr,kpr,apr,fkpr,fdpr,hs_percent,cl_percent
 596404,amer_kickoff_2026,johnqt,0,42,1.44,229.0,1.61,0.83,159.1,0.88,0.21,0.02,0.07,0.35,0.17
 596404,amer_kickoff_2026,cortezia,0,42,0.8,184.5,0.81,0.67,132.3,0.6,0.24,0.12,0.05,0.36,0.14
 596404,amer_kickoff_2026,reduxx,0,42,0.58,128.5,0.44,0.6,84.2,0.36,0.21,0.14,0.17,0.35,0.0
