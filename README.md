@@ -1,9 +1,16 @@
-# Sentinels Data Analysis
-An in-depth analysis of data, statistics, and performance by the Sentinels Professional Valorant Team throughout the VCT 2026 Season. This repository contains the datasets, data collection scripts, statistical analyses, visualizations, and research paper developed for the project.
+# Sentinels Performance Analysis
+An exploratory data analysis of Sentinels' competitive performance, examining player statistics, team trends, and match outcomes to uncover insights into what contributed to success throughout the season.
+
+## Overview
+This project analyzes Sentinels' team and player performances throughout the Valorant competitive season in 2026. Using match data, Python, and data visualization, this analysis explores and explains individual and team statistics, round scenarios, and match outomes to depict team and player performance.
 
 ## Goals
-
-This project looks to analyze reasons for team success/shortcomings, winning and losing conditions for the team, individual player performance, as well as overall strengths and weaknesses of the team.
+This project aims to identify factors for team success/shortcomings, winning and losing conditions for the team, individual player performance, as well as overall strengths and weaknesses of the team. More specifically, to answer questions like:
+- What were the team's strengths and weaknesses?
+- What specifically contributed to wins/losses?
+- Which players had a bigger "impact" than others?
+- In what ways did the team improve or decline between events?
+- How did Sentinels compare to the rest of the league?
 
 ## Datasets
 Datasets created based on statistics from VCT Kickoff 2026: Americas, and VCT 2026: Americas Stage 1.
@@ -22,7 +29,7 @@ Datasets created based on statistics from VCT Kickoff 2026: Americas, and VCT 20
 - Jupyter Notebook
 
 ## Research Paper
-This is the link to a research paper for an explanation of the project, the game, methodology, statistics, and qualitative data in greater detail
+A link to a research paper for a further explanation of the project, the game, methodology, statistics, and qualitative data can be found here:
 
 https://www.overleaf.com/read/zffdpftssdcp#989a92
 
